@@ -1,0 +1,181 @@
+/*
+CSS Reset
+*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Overpass", serif;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+Colors
+*/
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --btn-background: rgba(114, 113, 113, 0.144);
+}
+
+.main-container {
+  background-color: var(--Very-Dark-Blue);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 0 1rem;
+}
+
+.box-container {
+    width: 100%;
+  height: 400px;
+  max-width: 400px;
+  background-color: var(--Dark-Blue);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.2rem;
+  padding: 1.5rem;
+}
+
+.star-icon img {
+  background-color: var(--btn-background);
+  padding: .7rem;
+  border-radius: 50%;
+}
+
+.title {
+  color: var(--White);
+}
+
+.text {
+  color: var(--Light-Grey);
+  font-size: 0.9375rem;
+}
+
+.rating-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.rate-btn {
+  border: none;
+  background-color: var(--btn-background);
+  color: var(--Light-Grey);
+  font-size: 0.9375rem;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--Orange);
+    color: var(--Dark-Blue);
+  }
+}
+
+.rate-btn.selected{
+    background-color: var(--White);
+  color: var(--Dark-Blue);
+}
+
+.submit-btn {
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--Orange);
+  font-weight: 600;
+  font-size: .9rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--White);
+  }
+}
+
+
+/*
+Thank you state
+*/
+
+.thanks-box{
+    display: none;
+align-items: center;
+padding: 2rem;
+
+}
+
+.selected-rate-bar{
+    display: flex;
+    align-items: center;
+    font-size: .9375rem;
+
+    color: var(--Orange);
+    background-color: var(--btn-background);
+    padding: .1rem 1.2rem;
+    border-radius: 2rem;
+}
+
+.thanks-box .text{
+    text-align: center;
+}
